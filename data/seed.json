@@ -1,0 +1,222 @@
+{
+  "settings": {
+    "storeName": "STRATUM IT INDIA",
+    "tagline": "BUY | SELL | SUPPORT | GROW",
+    "whatsapp": "919309987139",
+    "phone": "+91 93099 87139",
+    "email": "",
+    "address": "",
+    "logo": ""
+  },
+  "banners": [
+    {
+      "id": "b1",
+      "image": "/img/banner1.jpg",
+      "link": "#laptops"
+    },
+    {
+      "id": "b2",
+      "image": "/img/banner2.jpg",
+      "link": "#laptops"
+    },
+    {
+      "id": "b3",
+      "image": "/img/banner3.jpg",
+      "link": "#laptops"
+    },
+    {
+      "id": "b4",
+      "image": "/img/banner4.jpg",
+      "link": "#laptops"
+    }
+  ],
+  "categories": [
+    {
+      "slug": "business",
+      "name": "Business Laptops",
+      "subtitle": "Reliable for Professionals",
+      "image": "/img/cat1.jpg"
+    },
+    {
+      "slug": "student",
+      "name": "Student Laptops",
+      "subtitle": "Performance for Learning",
+      "image": "/img/cat2.jpg"
+    },
+    {
+      "slug": "budget",
+      "name": "Budget Laptops",
+      "subtitle": "Great Value & Performance",
+      "image": "/img/cat3.jpg"
+    },
+    {
+      "slug": "gaming",
+      "name": "Gaming Options",
+      "subtitle": "Powerful Refurbished Laptops",
+      "image": "/img/cat4.jpg"
+    },
+    {
+      "slug": "accessories",
+      "name": "Accessories",
+      "subtitle": "Laptop Bags, Mouse, Keyboard & More",
+      "image": "/img/cat5.jpg"
+    },
+    {
+      "slug": "cctv",
+      "name": "CCTV & Security",
+      "subtitle": "Complete Security Solutions",
+      "image": "/img/cat6.jpg"
+    }
+  ],
+  "products": [
+    {
+      "id": "P1",
+      "name": "Dell Latitude 5400",
+      "brand": "Dell",
+      "tags": [
+        "business",
+        "budget"
+      ],
+      "cpu": "Intel Core i5 8th Gen",
+      "ram": "8GB RAM",
+      "storage": "256GB SSD",
+      "display": "14\" FHD Display",
+      "price": 18999,
+      "mrp": 0,
+      "stock": 5,
+      "condition": "Refurbished – quality tested",
+      "warranty": "Warranty support",
+      "battery": "",
+      "description": "Quality-tested refurbished Dell Latitude 5400 with Intel Core i5 8th Gen, 8GB RAM and 256GB SSD. Ideal for office work, online classes and everyday use.",
+      "images": [
+        "/img/laptop1.jpg"
+      ],
+      "visible": true,
+      "featured": true
+    },
+    {
+      "id": "P2",
+      "name": "HP EliteBook 840 G6",
+      "brand": "HP",
+      "tags": [
+        "business",
+        "budget"
+      ],
+      "cpu": "Intel Core i5 8th Gen",
+      "ram": "8GB RAM",
+      "storage": "256GB SSD",
+      "display": "14\" FHD Display",
+      "price": 19999,
+      "mrp": 0,
+      "stock": 5,
+      "condition": "Refurbished – quality tested",
+      "warranty": "Warranty support",
+      "battery": "",
+      "description": "Quality-tested refurbished HP EliteBook 840 G6 with Intel Core i5 8th Gen, 8GB RAM and 256GB SSD. Ideal for office work, online classes and everyday use.",
+      "images": [
+        "/img/laptop2.jpg"
+      ],
+      "visible": true,
+      "featured": true
+    },
+    {
+      "id": "P3",
+      "name": "Lenovo ThinkPad T480",
+      "brand": "Lenovo",
+      "tags": [
+        "business",
+        "budget"
+      ],
+      "cpu": "Intel Core i5 8th Gen",
+      "ram": "8GB RAM",
+      "storage": "256GB SSD",
+      "display": "14\" FHD Display",
+      "price": 18499,
+      "mrp": 0,
+      "stock": 5,
+      "condition": "Refurbished – quality tested",
+      "warranty": "Warranty support",
+      "battery": "",
+      "description": "Quality-tested refurbished Lenovo ThinkPad T480 with Intel Core i5 8th Gen, 8GB RAM and 256GB SSD. Ideal for office work, online classes and everyday use.",
+      "images": [
+        "/img/laptop3.jpg"
+      ],
+      "visible": true,
+      "featured": true
+    },
+    {
+      "id": "P4",
+      "name": "Dell Inspiron 15",
+      "brand": "Dell",
+      "tags": [
+        "student"
+      ],
+      "cpu": "Intel Core i5 10th Gen",
+      "ram": "8GB RAM",
+      "storage": "512GB SSD",
+      "display": "15.6\" FHD Display",
+      "price": 24999,
+      "mrp": 0,
+      "stock": 5,
+      "condition": "Refurbished – quality tested",
+      "warranty": "Warranty support",
+      "battery": "",
+      "description": "Quality-tested refurbished Dell Inspiron 15 with Intel Core i5 10th Gen, 8GB RAM and 512GB SSD. Ideal for office work, online classes and everyday use.",
+      "images": [
+        "/img/laptop4.jpg"
+      ],
+      "visible": true,
+      "featured": true
+    },
+    {
+      "id": "P5",
+      "name": "HP ProBook 440 G7",
+      "brand": "HP",
+      "tags": [
+        "business",
+        "student"
+      ],
+      "cpu": "Intel Core i5 10th Gen",
+      "ram": "8GB RAM",
+      "storage": "512GB SSD",
+      "display": "14\" FHD Display",
+      "price": 25999,
+      "mrp": 0,
+      "stock": 5,
+      "condition": "Refurbished – quality tested",
+      "warranty": "Warranty support",
+      "battery": "",
+      "description": "Quality-tested refurbished HP ProBook 440 G7 with Intel Core i5 10th Gen, 8GB RAM and 512GB SSD. Ideal for office work, online classes and everyday use.",
+      "images": [
+        "/img/laptop5.jpg"
+      ],
+      "visible": true,
+      "featured": true
+    },
+    {
+      "id": "P6",
+      "name": "ASUS VivoBook 15",
+      "brand": "ASUS",
+      "tags": [
+        "student"
+      ],
+      "cpu": "Intel Core i5 11th Gen",
+      "ram": "8GB RAM",
+      "storage": "512GB SSD",
+      "display": "15.6\" FHD Display",
+      "price": 28999,
+      "mrp": 0,
+      "stock": 5,
+      "condition": "Refurbished – quality tested",
+      "warranty": "Warranty support",
+      "battery": "",
+      "description": "Quality-tested refurbished ASUS VivoBook 15 with Intel Core i5 11th Gen, 8GB RAM and 512GB SSD. Ideal for office work, online classes and everyday use.",
+      "images": [
+        "/img/laptop6.jpg"
+      ],
+      "visible": true,
+      "featured": true
+    }
+  ],
+  "orders": []
+}

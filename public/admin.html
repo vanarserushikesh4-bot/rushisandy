@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Admin | STRATUM IT INDIA</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/admin.css">
+<link rel="icon" href="/favicon.svg">
+</head>
+<body>
+
+<section id="login" class="login" hidden>
+  <form id="loginForm" class="login-card">
+    <h1>STRATUM <span>Admin</span></h1>
+    <p>Log in to change photos, products, prices and see orders.</p>
+    <label>Password<input type="password" name="password" autocomplete="current-password" required autofocus></label>
+    <p class="err" id="loginErr" hidden></p>
+    <button class="btn block">Log in</button>
+    <a href="/" class="back">← Back to store</a>
+  </form>
+</section>
+
+<div id="app" class="app" hidden>
+  <aside class="side">
+    <div class="side-brand">STRATUM <span>Admin</span></div>
+    <nav id="tabs">
+      <button data-tab="orders" class="on">📦 Orders <em id="newCount"></em></button>
+      <button data-tab="products">💻 Products &amp; Photos</button>
+      <button data-tab="banners">🖼️ Banners</button>
+      <button data-tab="categories">🗂️ Categories</button>
+      <button data-tab="settings">⚙️ Settings</button>
+    </nav>
+    <div class="side-foot">
+      <a href="/" target="_blank">View store ↗</a>
+      <button id="logout">Log out</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="warn" id="pwWarn" hidden>You are using the default password. <a href="#" data-goto="settings">Change it now in Settings</a> before going live.</div>
+
+    <!-- ORDERS -->
+    <section data-panel="orders">
+      <div class="head"><h2>Orders</h2>
+        <select id="orderFilter"><option value="">All statuses</option><option>New</option><option>Confirmed</option><option>Shipped</option><option>Delivered</option><option>Cancelled</option></select>
+      </div>
+      <div id="orders"></div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section data-panel="products" hidden>
+      <div class="head"><h2>Products &amp; Photos</h2><button class="btn" id="newProduct">+ Add laptop</button></div>
+      <p class="hint">Click <b>Edit</b> on a laptop to change its photos, price, specs or stock.</p>
+      <div id="products" class="plist"></div>
+    </section>
+
+    <!-- BANNERS -->
+    <section data-panel="banners" hidden>
+      <div class="head"><h2>Top Banners</h2><button class="btn" id="saveBanners">Save banners</button></div>
+      <p class="hint">These are the big offer images at the top of the store. Best size: about 1000 × 840 px.</p>
+      <div id="banners" class="tiles"></div>
+      <button class="btn outline" id="addBanner">+ Add banner</button>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section data-panel="categories" hidden>
+      <div class="head"><h2>Categories</h2><button class="btn" id="saveCats">Save categories</button></div>
+      <p class="hint">The <b>code</b> links a category to laptops (tick it in a laptop's "Show in categories").</p>
+      <div id="cats" class="tiles"></div>
+      <button class="btn outline" id="addCat">+ Add category</button>
+    </section>
+
+    <!-- SETTINGS -->
+    <section data-panel="settings" hidden>
+      <div class="head"><h2>Settings</h2></div>
+      <form id="settingsForm" class="box form">
+        <h3>Store details</h3>
+        <div class="row2">
+          <label>Store name<input name="storeName"></label>
+          <label>Tagline<input name="tagline"></label>
+          <label>WhatsApp number (with country code, e.g. 919309987139)<input name="whatsapp" inputmode="numeric"></label>
+          <label>Phone (shown in footer)<input name="phone"></label>
+          <label>Email<input name="email" type="email"></label>
+          <label>Address<input name="address"></label>
+        </div>
+        <label>Logo (optional — leave empty to use the built-in logo)</label>
+        <div class="logo-row"><img id="logoPrev" alt=""><button type="button" class="btn outline sm" id="logoBtn">Upload logo</button><button type="button" class="btn ghost sm" id="logoClear">Remove</button></div>
+        <input type="hidden" name="logo">
+        <button class="btn">Save settings</button>
+      </form>
+      <form id="pwForm" class="box form">
+        <h3>Change admin password</h3>
+        <div class="row2">
+          <label>Current password<input type="password" name="current" required autocomplete="current-password"></label>
+          <label>New password (min 8 characters)<input type="password" name="next" required minlength="8" autocomplete="new-password"></label>
+        </div>
+        <button class="btn">Change password</button>
+      </form>
+    </section>
+  </main>
+</div>
+
+<!-- product editor -->
+<div class="overlay" id="editor" hidden>
+  <form class="modal form" id="productForm">
+    <button type="button" class="x" data-close aria-label="Close">×</button>
+    <h2 id="edTitle">Edit laptop</h2>
+
+    <h3>Photos</h3>
+    <p class="hint">The first photo is the main photo on the store. Use ◀ ▶ to change order.</p>
+    <div class="photos" id="photos"></div>
+    <label class="drop" id="drop">
+      <input type="file" id="photoInput" accept="image/jpeg,image/png,image/webp,image/gif" multiple hidden>
+      <b>+ Add photos</b><span>Click or drag photos here (JPG, PNG, WEBP · up to 6 MB each)</span>
+    </label>
+
+    <h3>Details</h3>
+    <div class="row2">
+      <label>Laptop name*<input name="name" required></label>
+      <label>Brand<input name="brand" list="brands"></label>
+      <label>Selling price (₹)*<input name="price" type="number" min="0" required></label>
+      <label>MRP / original price (₹, optional — shows % OFF)<input name="mrp" type="number" min="0"></label>
+      <label>Processor<input name="cpu" placeholder="Intel Core i5 8th Gen"></label>
+      <label>RAM<input name="ram" placeholder="8GB RAM"></label>
+      <label>Storage<input name="storage" placeholder="256GB SSD"></label>
+      <label>Display<input name="display" placeholder='14" FHD Display'></label>
+      <label>Condition<input name="condition"></label>
+      <label>Warranty<input name="warranty"></label>
+      <label>Battery<input name="battery" placeholder="e.g. 3+ hours backup"></label>
+      <label>Stock (how many available)<input name="stock" type="number" min="0"></label>
+    </div>
+    <label>Description<textarea name="description" rows="3"></textarea></label>
+    <label>Show in categories</label>
+    <div class="tags" id="tagBoxes"></div>
+    <label class="check"><input type="checkbox" name="visible"> Show this laptop on the store</label>
+    <datalist id="brands"><option>Dell</option><option>HP</option><option>Lenovo</option><option>ASUS</option><option>Acer</option><option>Apple</option></datalist>
+    <div class="ed-actions">
+      <button type="button" class="btn danger" id="delProduct">Delete</button>
+      <span></span>
+      <button type="button" class="btn ghost" data-close>Cancel</button>
+      <button class="btn">Save laptop</button>
+    </div>
+  </form>
+</div>
+
+<input type="file" id="singleUpload" accept="image/jpeg,image/png,image/webp,image/gif" hidden>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="/js/admin.js"></script>
+</body>
+</html>

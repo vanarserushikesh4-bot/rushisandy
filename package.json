@@ -1,0 +1,17 @@
+{
+  "name": "stratum-it-india-store",
+  "version": "1.0.0",
+  "description": "STRATUM IT INDIA laptop store with orders and admin panel",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.22.3",
+    "multer": "^1.4.5-lts.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

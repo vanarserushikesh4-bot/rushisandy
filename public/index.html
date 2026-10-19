@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STRATUM IT INDIA | Refurbished Laptops</title>
+<meta name="description" content="Buy quality-tested refurbished laptops from STRATUM IT INDIA — Dell, HP, Lenovo, ASUS at the best price with warranty support and pan-India delivery.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/store.css">
+<link rel="icon" href="/favicon.svg">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a href="/" class="logo" id="logo" aria-label="Home">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 48 48"><path d="M40 8H18C11 8 8 12 8 16.5S11 25 18 25h12c3 0 4 1.5 4 3.5S33 32 30 32H8l-2 8h24c7 0 10-4.5 10-9.5S37 22 30 22H18c-2.5 0-3.5-1.3-3.5-3s1-3 3.5-3h20z" fill="url(#lg)"/><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#27b6ff"/><stop offset="1" stop-color="#0b5fd6"/></linearGradient></defs></svg>
+      </span>
+      <span class="logo-text"><b id="storeName">STRATUM</b><small id="storeSub">IT INDIA</small></span>
+    </a>
+    <form class="search" id="searchForm" role="search">
+      <input id="searchInput" type="search" placeholder="Search Dell, HP, i5, 512GB…" aria-label="Search laptops">
+      <button aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+    </form>
+    <nav class="nav">
+      <a href="#laptops">Laptops</a>
+      <a href="#categories">Categories</a>
+      <a href="#track">Track Order</a>
+    </nav>
+    <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+      <svg viewBox="0 0 24 24"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg>
+      <span>Cart</span><em id="cartCount">0</em>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="banners wrap" id="banners" aria-label="Offers"></section>
+
+  <section class="wrap section" id="laptops">
+    <div class="sec-head">
+      <div>
+        <h2>Featured Refurbished Laptops</h2>
+        <p class="sub">Quality tested • Best price • Warranty support</p>
+      </div>
+      <div class="tools">
+        <div class="chips" id="chips"></div>
+        <select id="sort" aria-label="Sort">
+          <option value="featured">Sort: Featured</option>
+          <option value="low">Price: Low to High</option>
+          <option value="high">Price: High to Low</option>
+        </select>
+      </div>
+    </div>
+    <div class="grid" id="grid"></div>
+    <p class="empty" id="empty" hidden>No laptops match that. <a href="#" id="clearFilter">Show all laptops</a> or <a href="#" class="wa-link" data-msg="Hello, I am looking for a laptop. My requirement is: ">ask us on WhatsApp</a>.</p>
+  </section>
+
+  <section class="wrap section" id="categories">
+    <div class="sec-head"><div><h2>Shop by Category</h2></div></div>
+    <div class="cats" id="cats"></div>
+  </section>
+
+  <section class="wrap features" aria-label="Why buy from us">
+    <div class="feat"><span class="fi"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg></span><div><b>Quality Tested</b><small>100% checked before sale</small></div></div>
+    <div class="feat"><span class="fi"><svg viewBox="0 0 24 24"><path d="M7 5h10M7 9h10M7 5c5 0 7 2 7 4s-2 4-7 4l7 7"/></svg></span><div><b>Best Price</b><small>Value for money</small></div></div>
+    <div class="feat"><span class="fi"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 5 3 8 7 10 4-2 7-5 7-10V6z"/><path d="m9 12 2 2 4-4"/></svg></span><div><b>Warranty Support</b><small>Peace of mind</small></div></div>
+    <div class="feat"><span class="fi"><svg viewBox="0 0 24 24"><path d="M2 7h11v9H2zM13 10h4l3 3v3h-7"/><circle cx="6" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/></svg></span><div><b>Pan India Delivery</b><small>Safe &amp; fast</small></div></div>
+  </section>
+
+  <section class="wrap services">
+    <div class="svc"><div><b>Sell Your Old Laptop</b><small>Get best value today</small></div><a href="#" class="btn sm wa-link" data-msg="Hello, I want to sell my old laptop. Model and condition: ">Sell Now →</a></div>
+    <div class="svc"><div><b>Laptop Service &amp; Repair</b><small>Quick &amp; reliable support</small></div><a href="#" class="btn sm wa-link" data-msg="Hello, I need laptop service/repair. Problem: ">Book Service →</a></div>
+    <div class="svc"><div><b>Bulk Orders for Business</b><small>Special prices for companies</small></div><a href="#" class="btn sm wa-link" data-msg="Hello, I want a bulk quote. Quantity and requirement: ">Enquire Now →</a></div>
+  </section>
+
+  <section class="wrap section track" id="track">
+    <div>
+      <h2>Track Your Order</h2>
+      <p class="sub">Enter the Order ID you received and the phone number you ordered with.</p>
+    </div>
+    <form id="trackForm" class="track-form">
+      <input name="id" placeholder="Order ID (e.g. STLX…)" required>
+      <input name="phone" placeholder="Phone number" inputmode="tel" required>
+      <button class="btn">Track</button>
+    </form>
+    <div id="trackResult" class="track-result" hidden></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-in">
+    <div><b id="footName">STRATUM IT INDIA</b><p id="footInfo"></p></div>
+    <div class="foot-links"><a href="#laptops">Laptops</a><a href="#categories">Categories</a><a href="#track">Track Order</a><a href="/admin">Admin</a></div>
+    <p class="copy">© <span id="year"></span> STRATUM IT INDIA. All rights reserved.</p>
+  </div>
+</footer>
+
+<a class="wa-float wa-link" href="#" data-msg="Hello STRATUM IT INDIA, I want to enquire about laptops." aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32"><path fill="#fff" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.7c-2 0-4-.5-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.7 10.7 0 1 1 16 26.7zm5.9-8c-.3-.2-1.9-1-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5 1-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.8 1.2 3.2 1.4 3.4 2.4 3.6 5.8 5.1c2.1.9 3 1 4 .8.7-.1 1.9-.8 2.2-1.5s.3-1.3.2-1.5-.3-.2-.6-.4z"/></svg>
+</a>
+
+<!-- product details -->
+<div class="overlay" id="productModal" hidden>
+  <div class="modal product-modal" role="dialog" aria-modal="true" aria-labelledby="pmTitle">
+    <button class="x" data-close aria-label="Close">×</button>
+    <div class="pm-gallery">
+      <div class="pm-main"><img id="pmImg" alt=""></div>
+      <div class="pm-thumbs" id="pmThumbs"></div>
+    </div>
+    <div class="pm-info">
+      <span class="brand-tag" id="pmBrand"></span>
+      <h3 id="pmTitle"></h3>
+      <div class="pm-price"><b id="pmPrice"></b><s id="pmMrp"></s><span id="pmOff"></span></div>
+      <p class="stock" id="pmStock"></p>
+      <table class="spec-table" id="pmSpecs"></table>
+      <p class="pm-desc" id="pmDesc"></p>
+      <div class="qty-row">
+        <label>Qty</label>
+        <div class="qty"><button data-q="-1" aria-label="Less">−</button><input id="pmQty" value="1" inputmode="numeric" aria-label="Quantity"><button data-q="1" aria-label="More">+</button></div>
+      </div>
+      <div class="pm-actions">
+        <button class="btn outline" id="pmAdd">Add to Cart</button>
+        <button class="btn" id="pmBuy">Buy Now</button>
+      </div>
+      <a href="#" class="pm-wa" id="pmWa">Ask a question on WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<!-- cart -->
+<div class="overlay drawer-ov" id="cartDrawer" hidden>
+  <aside class="drawer" role="dialog" aria-modal="true" aria-label="Your cart">
+    <div class="drawer-head"><h3>Your Cart</h3><button class="x" data-close aria-label="Close">×</button></div>
+    <div class="drawer-body" id="cartItems"></div>
+    <div class="drawer-foot">
+      <div class="total-row"><span>Total</span><b id="cartTotal">₹0</b></div>
+      <button class="btn block" id="checkoutBtn">Proceed to Order</button>
+    </div>
+  </aside>
+</div>
+
+<!-- checkout -->
+<div class="overlay" id="checkoutModal" hidden>
+  <div class="modal checkout" role="dialog" aria-modal="true" aria-labelledby="coTitle">
+    <button class="x" data-close aria-label="Close">×</button>
+    <div id="coFormWrap">
+      <h3 id="coTitle">Place Your Order</h3>
+      <div class="co-summary" id="coSummary"></div>
+      <form id="coForm" class="form" novalidate>
+        <div class="row2">
+          <label>Full name*<input name="name" required autocomplete="name"></label>
+          <label>Phone (WhatsApp)*<input name="phone" required inputmode="tel" autocomplete="tel" placeholder="10-digit mobile"></label>
+        </div>
+        <label>Email<input name="email" type="email" autocomplete="email"></label>
+        <label>Delivery address*<textarea name="address" rows="2" required autocomplete="street-address"></textarea></label>
+        <div class="row3">
+          <label>City<input name="city" autocomplete="address-level2"></label>
+          <label>State<input name="state" autocomplete="address-level1"></label>
+          <label>Pincode*<input name="pincode" required inputmode="numeric" maxlength="6" autocomplete="postal-code"></label>
+        </div>
+        <fieldset class="pay">
+          <legend>Payment method</legend>
+          <label><input type="radio" name="payment" value="Cash on Delivery" checked> Cash on Delivery</label>
+          <label><input type="radio" name="payment" value="UPI / Online (we will share details)"> UPI / Online — we'll share payment details after confirming</label>
+          <label><input type="radio" name="payment" value="Bank Transfer"> Bank Transfer</label>
+        </fieldset>
+        <label>Note (optional)<input name="note" placeholder="Preferred delivery time, extra requirement…"></label>
+        <p class="err" id="coErr" hidden></p>
+        <button class="btn block" id="coSubmit">Confirm Order</button>
+        <p class="fine">Our team will call or WhatsApp you to confirm availability and delivery before dispatch.</p>
+      </form>
+    </div>
+    <div id="coDone" hidden class="done">
+      <div class="tick">✓</div>
+      <h3>Order placed!</h3>
+      <p>Your Order ID is <b id="doneId"></b>. Save it to track your order.</p>
+      <p class="sub">We'll contact you shortly to confirm. For faster confirmation, send the order to us on WhatsApp.</p>
+      <a class="btn wa" id="doneWa" target="_blank" rel="noopener">Send order on WhatsApp</a>
+      <button class="btn outline" data-close>Continue shopping</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="/js/store.js"></script>
+</body>
+</html>
